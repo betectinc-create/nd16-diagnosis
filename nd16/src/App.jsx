@@ -520,6 +520,7 @@ const CharSVG = ({ code, size = 120 }) => {
 const globalCSS = `
 @import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap');
 * { box-sizing: border-box; margin: 0; padding: 0; }
+button { -webkit-appearance: none; appearance: none; border: none; outline: none; }
 body { font-family: 'Zen Maru Gothic', sans-serif; }
 @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
 @keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
@@ -650,7 +651,7 @@ function QuizScreen({ step, total, question, value, onSelect, onNext, onBack }) 
               const sz = 34 + abs*5;
               const sel = value === val;
               return (
-                <button key={val} className="scale-btn" onClick={()=>onSelect(val)} style={{ width:sz, height:sz, borderRadius:"50%", background:sel?`linear-gradient(135deg,${color},${color}bb)`:`${color}${Math.round((0.25+abs*0.15)*255).toString(16).padStart(2,"0")}`, boxShadow:sel?`0 4px 16px ${color}50`:"none", transform:sel?"scale(1.2) translateY(-4px)":"scale(1)", transition:"all 0.15s" }}/>
+                <button key={val} className="scale-btn" onClick={()=>onSelect(val)} style={{ width:sz, height:sz, borderRadius:"50%", background:sel?`linear-gradient(135deg,${color},${color}bb)`:`${color}${Math.round((0.25+abs*0.15)*255).toString(16).padStart(2,"0")}`, boxShadow:sel?`0 4px 16px ${color}50`:"none", transform:sel?"scale(1.2) translateY(-4px)":"scale(1)", transition:"all 0.15s", border:"none", outline:"none" }}/>
               );
             })}
           </div>
