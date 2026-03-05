@@ -539,10 +539,11 @@ body { font-family: 'Zen Maru Gothic', sans-serif; }
 .btn-hover:hover { transform: translateY(-2px) scale(1.03); opacity: 0.9; }
 .card-hover { transition: all 0.22s ease; cursor: pointer; }
 .card-hover:hover { transform: translateY(-5px) scale(1.02); box-shadow: 0 16px 48px rgba(0,0,0,0.13) !important; }
-.scale-btn { transition: all 0.14s ease; cursor: pointer; border: none; }
+.scale-btn { transition: all 0.14s ease; cursor: pointer; border: none; outline: none; -webkit-appearance: none; }
 .scale-btn:hover { transform: scale(1.15) translateY(-3px) !important; }
-.tab-btn { transition: all 0.2s; cursor: pointer; border: none; font-family: inherit; }
-.nav-tab { transition: all 0.2s; cursor: pointer; border: none; font-family: inherit; }
+.tab-btn { transition: all 0.2s; cursor: pointer; border: none; outline: none; font-family: inherit; -webkit-appearance: none; }
+.nav-tab { transition: all 0.2s; cursor: pointer; border: none; outline: none; font-family: inherit; -webkit-appearance: none; }
+button { -webkit-appearance: none; }
 .copy-flash { animation: shimmer 0.6s ease; }
 `;
 
